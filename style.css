@@ -17,6 +17,13 @@ a {
   min-height: 100vh;
 }
 
+@media (min-width:758px) {
+  .ww{
+  word-spacing: 0.8rem;
+  line-height: 4rem;
+}
+}
+
 .s3 {
   width: 100vw;
   min-height: 50vh;
