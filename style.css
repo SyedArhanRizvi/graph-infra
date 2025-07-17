@@ -17,11 +17,11 @@ a {
   min-height: 100vh;
 } 
 
-.ww {
+
+@media (min-width:758px) {
+  .ww {
   line-height: 4rem !important;
 }
-@media (min-width:758px) {
-  
 }
 
 .s3 {
