@@ -16,12 +16,12 @@ a {
   width: 100vw;
   min-height: 100vh;
 }
-
-@media (min-width:758px) {
-  .ww{
-  word-spacing: 0.8rem;
+.ww{
+  /* word-spacing: 0.8rem; */
   line-height: 4rem;
 }
+@media (min-width:758px) {
+  
 }
 
 .s3 {
