@@ -35,5 +35,17 @@
       </video>
 
   </body>
-
+    <script>
+      function reloadMobileVideo() {
+        document.querySelector('video').src = "./images/graphVM.mp4";
+      }
+      window.addEventListener('resize', (e)=>{
+        console.log('====================================');
+        console.log(e.target);
+        console.log('====================================');
+            if(e.target.innerWidth <= 1024) {
+              reloadMobileVideo();
+            }
+      })
+    </script>
 </html>

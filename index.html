@@ -17,10 +17,10 @@
 
 <body class="bg-white text-black">
   <!-- Header -->
-  <header class="w-full fixed top-0 left-0 z-50">
+  <!-- Header -->
+  <header class="w-screen fixed top-0 left-0 z-50">
     <nav id="navbar"
-      class="transition-all duration-300 ease-in-out fixed w-full z-50 flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 md:py-10 text-white bg-transparent top-0">
-
+      class="transition-all bg-black w-full duration-300 ease-in-out fixed z-50 flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 md:py-10 text-white bg-transparent top-0">
 
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -36,7 +36,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden p-2" aria-label="Toggle Menu">
+      <button id="menu-btn" class="md:hidden p-2 focus:outline-none" aria-label="Toggle Menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -45,19 +45,20 @@
       </button>
     </nav>
 
-    <!-- Mobile Links -->
-    <!-- <div id="mobile-menu" class="md:hidden hidden flex-col bg-black text-white text-center py-4">
-      <a href="#" class="py-2 px-4 hover:bg-gray-800">Home</a>
-      <a href="#" class="py-2 px-4 hover:bg-gray-800">About Us</a>
-      <a href="#" class="py-2 px-4 hover:bg-gray-800">Upcoming Projects</a>
-      <a href="#" class="py-2 px-4 hover:bg-gray-800">Contact</a>
-    </div> -->
+    <!-- ✅ Mobile Links (Visible on toggle) -->
+    <div id="mobile-menu"
+      class="md:hidden hidden flex-col bg-black text-white text-center space-y-4 py-6 px-6 transition-all duration-300">
+      <a href="#" class="block py-2 px-4 hover:bg-gray-800 rounded">Home</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-800 rounded">About Us</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-800 rounded">Upcoming Projects</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-800 rounded">Contact</a>
+    </div>
   </header>
 
+
   <!-- Main -->
-  <main class=" w-full">
     <!-- Section 1 -->
-    <section class="s1 w-full flex justify-center items-center md:py-20 px-4 md:px-12 text-center">
+    <section class="s1 w-screen flex justify-center items-center md:py-20 px-4 md:px-12 text-center">
       <div class="max-w-7xl flex flex-col items-center text-white md:mt-20 ">
         <h1 class="text-2xl md:text-5xl ww font-semibold mb-4">
           Experience the Perfect Fusion of Lifestyle & Investment with GRAPH's Residential Plots
@@ -89,7 +90,7 @@
     </section>
 
     <!-- Section 2 (Placeholder) -->
-    <section class="w-full relative min-h-[300px] flex flex-col gap-24 pb-12 bg-white">
+    <section class="w-screen relative min-h-[300px] flex flex-col gap-24 pb-12 bg-white">
       <!-- Top Div -->
       <div class="flex flex-col lg:flex-row gap-8 items-center mb-4">
         <!-- Left Div For Img -->
@@ -99,7 +100,7 @@
         </div>
 
         <!-- Right Side Div For Content -->
-        <div class="w-full lg:w-1/2 flex flex-col p-4 pt-0 md:p-0 gap-4 bg-[#FDFDFD]">
+        <div class="w-full lg:w-1/2 flex flex-col p-4 pt-0 md:p-2 gap-4 bg-[#FDFDFD]">
           <h1 class="text-2xl md:text-4xl mb-6 font-bold text-[#7C5A19]">
             The Graph Story
           </h1>
@@ -164,7 +165,7 @@
     </section>
 
     <!-- The Section 3 Is Starting From Here  -->
-    <section class="s3 w-full px-4 py-12">
+    <section class="s3 w-screen px-4 py-12">
       <!-- Top Div: Heading & Arrow Buttons -->
       <div class="lg:w-[90%] w-full mx-auto flex justify-between items-center mb-6 md:mb-[70px]">
         <h2 class="text-2xl md:text-4xl font-semibold text-[#7C5A19]">Prime Highlights</h2>
@@ -172,16 +173,21 @@
         <!-- Navigation Buttons -->
         <div class="flex gap-2">
           <button onclick="scrollCarousel('left')" class="p-3 rounded-full bg-white hover:bg-gray-300 transition">
-           
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.08741 14.3375C2.91184 14.5133 2.81323 14.7515 2.81323 15C2.81323 15.2484 2.91184 15.4867 3.08741 15.6625L11.8212 24.4125C11.9076 24.5021 12.011 24.5735 12.1254 24.6227C12.2397 24.6719 12.3627 24.6978 12.4872 24.699C12.6117 24.7001 12.7351 24.6764 12.8504 24.6294C12.9656 24.5823 13.0703 24.5127 13.1584 24.4247C13.2465 24.3368 13.3161 24.2321 13.3633 24.1169C13.4105 24.0017 13.4343 23.8783 13.4333 23.7538C13.4322 23.6293 13.4064 23.5063 13.3574 23.3919C13.3083 23.2775 13.2369 23.174 13.1474 23.0875L6.01241 15.9387L26.2499 15.9525C26.4985 15.9528 26.7371 15.8544 26.9132 15.6788C27.0892 15.5032 27.1883 15.2649 27.1887 15.0162C27.189 14.7676 27.0905 14.529 26.915 14.353C26.7394 14.1769 26.501 14.0778 26.2524 14.0775L6.00991 14.065L13.1487 6.91249C13.2382 6.82596 13.3095 6.72248 13.3586 6.60808C13.4077 6.49368 13.4335 6.37065 13.4345 6.24617C13.4355 6.12169 13.4118 5.99825 13.3646 5.88305C13.3174 5.76786 13.2477 5.66322 13.1596 5.57524C13.0716 5.48726 12.9669 5.41769 12.8516 5.37061C12.7364 5.32353 12.6129 5.29986 12.4885 5.301C12.364 5.30214 12.241 5.32806 12.1266 5.37725C12.0123 5.42644 11.9088 5.49791 11.8224 5.58749L3.08741 14.3375Z" fill="black"/>
-</svg>
+
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.08741 14.3375C2.91184 14.5133 2.81323 14.7515 2.81323 15C2.81323 15.2484 2.91184 15.4867 3.08741 15.6625L11.8212 24.4125C11.9076 24.5021 12.011 24.5735 12.1254 24.6227C12.2397 24.6719 12.3627 24.6978 12.4872 24.699C12.6117 24.7001 12.7351 24.6764 12.8504 24.6294C12.9656 24.5823 13.0703 24.5127 13.1584 24.4247C13.2465 24.3368 13.3161 24.2321 13.3633 24.1169C13.4105 24.0017 13.4343 23.8783 13.4333 23.7538C13.4322 23.6293 13.4064 23.5063 13.3574 23.3919C13.3083 23.2775 13.2369 23.174 13.1474 23.0875L6.01241 15.9387L26.2499 15.9525C26.4985 15.9528 26.7371 15.8544 26.9132 15.6788C27.0892 15.5032 27.1883 15.2649 27.1887 15.0162C27.189 14.7676 27.0905 14.529 26.915 14.353C26.7394 14.1769 26.501 14.0778 26.2524 14.0775L6.00991 14.065L13.1487 6.91249C13.2382 6.82596 13.3095 6.72248 13.3586 6.60808C13.4077 6.49368 13.4335 6.37065 13.4345 6.24617C13.4355 6.12169 13.4118 5.99825 13.3646 5.88305C13.3174 5.76786 13.2477 5.66322 13.1596 5.57524C13.0716 5.48726 12.9669 5.41769 12.8516 5.37061C12.7364 5.32353 12.6129 5.29986 12.4885 5.301C12.364 5.30214 12.241 5.32806 12.1266 5.37725C12.0123 5.42644 11.9088 5.49791 11.8224 5.58749L3.08741 14.3375Z"
+                fill="black" />
+            </svg>
           </button>
           <button onclick="scrollCarousel('right')" class="p-3 rounded-full bg-white hover:bg-gray-300 transition">
             <p class="rotate-180">
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.08741 14.3375C2.91184 14.5133 2.81323 14.7515 2.81323 15C2.81323 15.2484 2.91184 15.4867 3.08741 15.6625L11.8212 24.4125C11.9076 24.5021 12.011 24.5735 12.1254 24.6227C12.2397 24.6719 12.3627 24.6978 12.4872 24.699C12.6117 24.7001 12.7351 24.6764 12.8504 24.6294C12.9656 24.5823 13.0703 24.5127 13.1584 24.4247C13.2465 24.3368 13.3161 24.2321 13.3633 24.1169C13.4105 24.0017 13.4343 23.8783 13.4333 23.7538C13.4322 23.6293 13.4064 23.5063 13.3574 23.3919C13.3083 23.2775 13.2369 23.174 13.1474 23.0875L6.01241 15.9387L26.2499 15.9525C26.4985 15.9528 26.7371 15.8544 26.9132 15.6788C27.0892 15.5032 27.1883 15.2649 27.1887 15.0162C27.189 14.7676 27.0905 14.529 26.915 14.353C26.7394 14.1769 26.501 14.0778 26.2524 14.0775L6.00991 14.065L13.1487 6.91249C13.2382 6.82596 13.3095 6.72248 13.3586 6.60808C13.4077 6.49368 13.4335 6.37065 13.4345 6.24617C13.4355 6.12169 13.4118 5.99825 13.3646 5.88305C13.3174 5.76786 13.2477 5.66322 13.1596 5.57524C13.0716 5.48726 12.9669 5.41769 12.8516 5.37061C12.7364 5.32353 12.6129 5.29986 12.4885 5.301C12.364 5.30214 12.241 5.32806 12.1266 5.37725C12.0123 5.42644 11.9088 5.49791 11.8224 5.58749L3.08741 14.3375Z" fill="black"/>
-</svg></p>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.08741 14.3375C2.91184 14.5133 2.81323 14.7515 2.81323 15C2.81323 15.2484 2.91184 15.4867 3.08741 15.6625L11.8212 24.4125C11.9076 24.5021 12.011 24.5735 12.1254 24.6227C12.2397 24.6719 12.3627 24.6978 12.4872 24.699C12.6117 24.7001 12.7351 24.6764 12.8504 24.6294C12.9656 24.5823 13.0703 24.5127 13.1584 24.4247C13.2465 24.3368 13.3161 24.2321 13.3633 24.1169C13.4105 24.0017 13.4343 23.8783 13.4333 23.7538C13.4322 23.6293 13.4064 23.5063 13.3574 23.3919C13.3083 23.2775 13.2369 23.174 13.1474 23.0875L6.01241 15.9387L26.2499 15.9525C26.4985 15.9528 26.7371 15.8544 26.9132 15.6788C27.0892 15.5032 27.1883 15.2649 27.1887 15.0162C27.189 14.7676 27.0905 14.529 26.915 14.353C26.7394 14.1769 26.501 14.0778 26.2524 14.0775L6.00991 14.065L13.1487 6.91249C13.2382 6.82596 13.3095 6.72248 13.3586 6.60808C13.4077 6.49368 13.4335 6.37065 13.4345 6.24617C13.4355 6.12169 13.4118 5.99825 13.3646 5.88305C13.3174 5.76786 13.2477 5.66322 13.1596 5.57524C13.0716 5.48726 12.9669 5.41769 12.8516 5.37061C12.7364 5.32353 12.6129 5.29986 12.4885 5.301C12.364 5.30214 12.241 5.32806 12.1266 5.37725C12.0123 5.42644 11.9088 5.49791 11.8224 5.58749L3.08741 14.3375Z"
+                  fill="black" />
+              </svg>
+            </p>
           </button>
         </div>
       </div>
@@ -245,7 +251,7 @@
 
 
 
-    <section class="s4 w-full min-h-screen relative flex flex-col pt-16 items-center">
+    <section class="s4 w-screen min-h-screen relative flex flex-col pt-16 items-center">
       <!-- Over Lay Div  -->
       <div class="overLay absolute h-full w-full top-0 left-0 z-10"></div>
       <!-- Top Div -->
@@ -389,115 +395,124 @@
 
 
     </section>
-  </main>
-
   <!-- Footer -->
-<footer class="w-full bg-[#0a0a0a] flex flex-col justify-center items-center text-[#FCEF96cc] pt-16 pb-4 md:px-24 md:py-10 text-base md:text-[17px]">
-  <!-- Top Grid -->
-  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3  gap-20 text-center md:text-left">
+  <footer
+    class="w-screen bg-[#0a0a0a] flex flex-col justify-center items-center text-[#FCEF96cc] pt-16 pb-4 md:px-24 md:py-10 text-base md:text-[17px]">
+    <!-- Top Grid -->
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3  gap-20 text-center md:text-left">
 
-    <!-- Column 1: Logo & About -->
-    <div class="">
-      <!-- Logo -->
-      <div class="mb-6">
-        <img src="./images/logo.png" alt="Logo" class="h-16 w-auto mx-auto md:mx-0">
+      <!-- Column 1: Logo & About -->
+      <div class="">
+        <!-- Logo -->
+        <div class="mb-6">
+          <img src="./images/logo.png" alt="Logo" class="h-16 w-auto mx-auto md:mx-0">
+        </div>
+
+        <!-- About Text -->
+        <p class="leading-relaxed text-[#FCEF9699]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque quod minus eius itaque
+          similique reiciendis quidem delectus omnis eligendi explicabo consequuntur corrupti esse ut.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start gap-5 mt-6">
+          <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_280_36" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+                height="16">
+                <rect x="0.5" y="0.5" width="15" height="15" fill="url(#pattern0_280_36)" />
+              </mask>
+              <g mask="url(#mask0_280_36)">
+                <rect x="0.5" y="0.5" width="15" height="15" fill="black" />
+              </g>
+              <defs>
+                <pattern id="pattern0_280_36" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_280_36" transform="scale(0.0078125)" />
+                </pattern>
+                <image id="image0_280_36" width="128" height="128" preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAtrAAALawEADeBKAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAUdQTFRF////AQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQAC6VcNbQAAAGx0Uk5TAAEDBQcICQoLDQ4QERQVFhgbHCMkJygpLjE3ODk6PkBBR0pNUlVWWFpiZGprcHN3enx9f4CChoyOlJWXmJugoaWmqKqtr7K1ury+wsXGycrO0dLT1dbZ2uDh4+bn6Onr7O7v8fL29/n6+/3+XcICgwAAAYlJREFUeNrt10dPQkEYheFBQQW76EXFrlgRu9hFsXdRsQFiQ4Xv/6/dmnCHDdw5iTnvepLzrL5klKpM7oG5tfjJTer76z3zmExcnh4dxDeWwqE+q1o5XlX37HFOdAWdnvdMPUipHAbURZ5FgIDJrAgQ4N4UQQJaLwQK6E0LFND+KlCA91agANe+YAGLggUE8mDAjmABVh4MiAkW0JEHA1YEDLgGAxoLYEBIwICNUnuZs+35sf4/+SoPuNeufyw3K+fzavcTbcpEft3+k8/IvgrqANNm9tWwZj9bawgwoQEsGNpXMxrAoClAVAPoNAVY1wCaTAE0h/DHBQZkFBiQJoAAAggggABHxjxWcbv2gBfLtobyAEEpt3E0oAcNaAEDPhUYcIcGHKIBq2hABA0YQQO60IB6MOBNgQFXaMAeGhBFA8JowBAaEAADCjVgQEqBAedoQKxsgH+ruKT9WM7m6ahyIn7NCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAgH8G+AWz8Qodt8wjOwAAAABJRU5ErkJggg==" />
+              </defs>
+            </svg>
+          </a> <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition"><i data-lucide="linkedin"
+              class="icn w-4 h-4"></i></a>
+          <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_280_60" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+                height="16">
+                <rect width="15" height="15" transform="matrix(-1 0 0 1 15.5 0.5)" fill="url(#pattern0_280_60)" />
+              </mask>
+              <g mask="url(#mask0_280_60)">
+                <rect x="0.5" y="0.5" width="15" height="15" fill="black" />
+              </g>
+              <defs>
+                <pattern id="pattern0_280_60" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_280_60" transform="scale(0.0078125)" />
+                </pattern>
+                <image id="image0_280_60" width="128" height="128" preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,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" />
+              </defs>
+            </svg>
+          </a>
+
+          <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_280_114" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14"
+                height="14">
+                <path d="M0.923096 0.923096H13.0769V13.0769H0.923096V0.923096Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_280_114)">
+                <path
+                  d="M10.4943 1.49243H12.3581L8.28659 6.15777L13.0769 12.5073H9.32661L6.38712 8.65712L3.02745 12.5073H1.16183L5.51638 7.51553L0.923096 1.4933H4.76892L7.42193 5.01184L10.4943 1.49243ZM9.83881 11.3891H10.8719L4.20463 2.55242H3.0969L9.83881 11.3891Z"
+                  fill="black" />
+              </g>
+            </svg></a>
+        </div>
       </div>
 
-      <!-- About Text -->
-      <p class="leading-relaxed text-[#FCEF9699]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque quod minus eius itaque
-        similique reiciendis quidem delectus omnis eligendi explicabo consequuntur corrupti esse ut.
-      </p>
+      <!-- Column 2: Explore Links -->
+      <div class="flex flex-col  items-center">
 
-      <!-- Social Icons -->
-      <div class="flex justify-center md:justify-start gap-5 mt-6">
-        <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<mask id="mask0_280_36" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-<rect x="0.5" y="0.5" width="15" height="15" fill="url(#pattern0_280_36)"/>
-</mask>
-<g mask="url(#mask0_280_36)">
-<rect x="0.5" y="0.5" width="15" height="15" fill="black"/>
-</g>
-<defs>
-<pattern id="pattern0_280_36" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_280_36" transform="scale(0.0078125)"/>
-</pattern>
-<image id="image0_280_36" width="128" height="128" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAtrAAALawEADeBKAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAUdQTFRF////AQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQAC6VcNbQAAAGx0Uk5TAAEDBQcICQoLDQ4QERQVFhgbHCMkJygpLjE3ODk6PkBBR0pNUlVWWFpiZGprcHN3enx9f4CChoyOlJWXmJugoaWmqKqtr7K1ury+wsXGycrO0dLT1dbZ2uDh4+bn6Onr7O7v8fL29/n6+/3+XcICgwAAAYlJREFUeNrt10dPQkEYheFBQQW76EXFrlgRu9hFsXdRsQFiQ4Xv/6/dmnCHDdw5iTnvepLzrL5klKpM7oG5tfjJTer76z3zmExcnh4dxDeWwqE+q1o5XlX37HFOdAWdnvdMPUipHAbURZ5FgIDJrAgQ4N4UQQJaLwQK6E0LFND+KlCA91agANe+YAGLggUE8mDAjmABVh4MiAkW0JEHA1YEDLgGAxoLYEBIwICNUnuZs+35sf4/+SoPuNeufyw3K+fzavcTbcpEft3+k8/IvgrqANNm9tWwZj9bawgwoQEsGNpXMxrAoClAVAPoNAVY1wCaTAE0h/DHBQZkFBiQJoAAAggggABHxjxWcbv2gBfLtobyAEEpt3E0oAcNaAEDPhUYcIcGHKIBq2hABA0YQQO60IB6MOBNgQFXaMAeGhBFA8JowBAaEAADCjVgQEqBAedoQKxsgH+ruKT9WM7m6ahyIn7NCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAgH8G+AWz8Qodt8wjOwAAAABJRU5ErkJggg=="/>
-</defs>
-</svg>
-</a> <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition"><i data-lucide="linkedin" class="icn w-4 h-4"></i></a>
-        <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<mask id="mask0_280_60" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-<rect width="15" height="15" transform="matrix(-1 0 0 1 15.5 0.5)" fill="url(#pattern0_280_60)"/>
-</mask>
-<g mask="url(#mask0_280_60)">
-<rect x="0.5" y="0.5" width="15" height="15" fill="black"/>
-</g>
-<defs>
-<pattern id="pattern0_280_60" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_280_60" transform="scale(0.0078125)"/>
-</pattern>
-<image id="image0_280_60" width="128" height="128" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
-</defs>
-</svg>
-</a>
-       
-        <a href="#" class="rounded-full bg-[#FCEF96] text-black p-3 transition">
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_280_114" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
-<path d="M0.923096 0.923096H13.0769V13.0769H0.923096V0.923096Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_280_114)">
-<path d="M10.4943 1.49243H12.3581L8.28659 6.15777L13.0769 12.5073H9.32661L6.38712 8.65712L3.02745 12.5073H1.16183L5.51638 7.51553L0.923096 1.4933H4.76892L7.42193 5.01184L10.4943 1.49243ZM9.83881 11.3891H10.8719L4.20463 2.55242H3.0969L9.83881 11.3891Z" fill="black"/>
-</g>
-</svg></a>
-      </div>
-    </div>
-
-    <!-- Column 2: Explore Links -->
-    <div class="flex flex-col  items-center">
-   
-      <ul class="space-y-3 flex flex-col justify-center">
+        <ul class="space-y-3 flex flex-col justify-center">
           <p class="font-light text-[#FCEF96] text-2xl mb-6">Explore</p>
-        <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Home</a></li>
-        <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">About</a></li>
-        <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Moradabad</a></li>
-        <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Noida</a></li>
-        <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Contact</a></li>
-      </ul>
-    </div>
+          <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Home</a></li>
+          <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">About</a></li>
+          <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Moradabad</a></li>
+          <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Noida</a></li>
+          <li><a href="#" class="hover:text-white text-xl text-[#FCEF9699] transition">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- Column 3: Contact Info -->
-    <div>
-    
-      <div class="space-y-4 leading-relaxed">
-        <div>
-          <p  class="font-light text-[#FCEF96] text-2xl mb-2">Phone:</p>
-          <p class="text-xl font-light text-[#FCEF9699]">+91-999 999 9999</p>
-        </div>
-        <div>
-          <p  class="font-light text-[#FCEF96] text-2xl mb-2">Email:</p>
-          <p class="text-xl font-light text-[#FCEF9699]">info@graphinfra.com</p>
-        </div>
-        <div>
-          <p  class="font-light text-[#FCEF96] text-2xl mb-2">Address:</p>
-          <p class="text-xl font-light text-[#FCEF9699]">
-            H. NO. 2514, 2nd Floor,<br />
-            Hudson Line City, G.T.B. Nagar,<br />
-            Delhi, North West Delhi - 110009
-          </p>
+      <!-- Column 3: Contact Info -->
+      <div>
+
+        <div class="space-y-4 leading-relaxed">
+          <div>
+            <p class="font-light text-[#FCEF96] text-2xl mb-2">Phone:</p>
+            <p class="text-xl font-light text-[#FCEF9699]">+91-999 999 9999</p>
+          </div>
+          <div>
+            <p class="font-light text-[#FCEF96] text-2xl mb-2">Email:</p>
+            <p class="text-xl font-light text-[#FCEF9699]">info@graphinfra.com</p>
+          </div>
+          <div>
+            <p class="font-light text-[#FCEF96] text-2xl mb-2">Address:</p>
+            <p class="text-xl font-light text-[#FCEF9699]">
+              H. NO. 2514, 2nd Floor,<br />
+              Hudson Line City, G.T.B. Nagar,<br />
+              Delhi, North West Delhi - 110009
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Divider -->
-  <div class="border-t w-full border-[#FCEF9655] mt-10 pt-6 text-center text-sm text-[#FCEF96bb]">
-   <p class="italic text-sm md:text-lg font-light"> &copy; 2025 Graph Developers. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- Divider -->
+    <div class="border-t w-full border-[#FCEF9655] mt-10 pt-6 text-center text-sm text-[#FCEF96bb]">
+      <p class="italic text-sm md:text-lg font-light"> &copy; 2025 Graph Developers. All rights reserved.</p>
+    </div>
+  </footer>
 
 
 
@@ -505,21 +520,21 @@
 
   <!-- Scripts -->
   <script>
+    lucide.createIcons();
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
+    const navbar = document.getElementById("navbar");
+    let lastScrollTop = 0;
+
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
-
-    lucide.createIcons();
-    const navbar = document.getElementById("navbar");
-    let lastScrollTop = 0;
 
     window.addEventListener("scroll", () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop === 0) {
-        // At the very top of the page
+        // At top
         navbar.classList.remove("bg-black", "py-2", "md:py-4");
         navbar.classList.add("bg-transparent", "py-4", "md:py-10");
         navbar.style.top = "0";
@@ -537,6 +552,7 @@
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
+
 
     const container = document.getElementById("carouselContainer");
 
