@@ -1,0 +1,148 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+  overflow-x: hidden;
+}
+
+body p,
+a {
+  font-family: 'Inter', sans-serif;
+}
+
+.s1 {
+  background-image: url(./images/heroImg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.s3 {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background: linear-gradient(135deg, #D5A950 0%, #FBE687 50%, #FBDB77 100%);
+}
+
+.card {
+  border-top-right-radius: 75px;
+
+}
+
+.c2 {
+  border-bottom-left-radius: 75px;
+  overflow: hidden;
+}
+
+.s4 {
+  background-image: url(./images/s4BG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.s4 .overLay {
+  background: linear-gradient(to bottom, #0A2162 0.9%, #00000066 80%);
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.blurD {
+  background-image: url(./images/bgCloud.png);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* Background animation */
+@keyframes diagonalGradientMove {
+  0% {
+    background-position: bottom left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+.btn-animated {
+  background: linear-gradient(to top right, #FAD872, #FCF29A, #E4C56D);
+  background-size: 200% 200%;
+  background-position: bottom left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Background Keyframe */
+
+
+.btn-animated {
+  background: linear-gradient(to top right, #FAD872, #FCF29A, #E4C56D);
+  background-size: 200% 200%;
+  background-position: bottom left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-animated:hover {
+  animation: diagonalGradientMove 1s linear 0.5s;
+  /* color: white; */
+}
+
+@keyframes iconFade {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon-animate {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.group:hover .icon-animate {
+  animation: iconFade 0.4s ease forwards;
+}
+
+@keyframes diagonalGradientMove {
+  0% {
+    background-position: bottom left;
+    background-image: linear-gradient(to top right, #fb923c, #fb923c, #f97316);
+    color: white;
+  }
+
+  100% {
+    background-position: top right;
+    background-image: linear-gradient(to top right, #FAD872, #FCF29A, #E4C56D);
+  }
+}
+
+.icn:hover {
+  transform: scale(1.5);
+  transition: transform 0.2s;
+}
+
