@@ -15,10 +15,10 @@ a {
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
-}
-.ww{
-  /* word-spacing: 0.8rem; */
-  line-height: 4rem;
+} 
+
+.ww {
+  line-height: 4rem !important;
 }
 @media (min-width:758px) {
   
@@ -152,4 +152,6 @@ a {
   transform: scale(1.5);
   transition: transform 0.2s;
 }
+
+
 
