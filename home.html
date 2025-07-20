@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Graph Infra</title>
+</head>
+
+<body>
+
+  <body class="bg-white text-black">
+    <!-- Header -->
+    <header class="w-full fixed flex justify-center items-center top-10 left-0 z-50">
+
+
+
+      <!-- Logo -->
+      <a href="./index.html" class="flex-shrink-0">
+        <img src="./images/logo.png" alt="Logo" class="h-10 md:h-20 w-auto object-contain" />
+      </a>
+
+
+
+
+
+    </header>
+
+    <!-- Main -->
+    <main class=" w-screen h-screen">
+      <!-- Section 1 -->
+      <video src="./images/graphVideo.mp4" muted autoplay loop class="s1 object-cover w-full h-full ">
+
+      </video>
+
+  </body>
+  <script>
+    function reloadMobileVideo() {
+      document.querySelector('video').src = "./images/graphVM.mp4";
+    }
+    window.addEventListener('resize', (e) => {
+      console.log('====================================');
+      console.log(e.target);
+      console.log('====================================');
+      if (e.target.innerWidth <= 1024) {
+        reloadMobileVideo();
+      }
+    })
+  </script>
+
+</html>
