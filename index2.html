@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Graph Infra</title>
+</head>
+
+<body>
+
+  <body class="bg-white text-black">
+    <!-- Header -->
+    <header class="w-full fixed flex justify-center items-center top-10 left-0 z-50">
+      <!-- Logo -->
+      <a href="./home.html" class="flex-shrink-0">
+        <img src="./images/logo.png" alt="Logo" class="h-10 md:h-20 w-auto object-contain" />
+      </a>
+    </header>
+
+    <!-- Main -->
+    <video autoplay muted loop playsinline preload="">
+      <source src="./images/graph-website-video-desktop.mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+  </body>
+  <script src="./script.js"></script>
+  <script>
+    function reloadMobileVideo() {
+      document.querySelector('video').src = "./images/graphVM.mp4";
+    }
+    window.addEventListener('resize', (e) => {
+      console.log('====================================');
+      console.log(e.target);
+      console.log('====================================');
+      if (e.target.innerWidth <= 1024) {
+        reloadMobileVideo();
+      }
+    })
+  </script>
+
+</html>
