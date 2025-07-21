@@ -58,50 +58,17 @@
 
   <!-- Main -->
   <!-- Section 1 -->
-  <section class="s1">
-    <!-- <div class="max-w-7xl flex flex-col items-center text-white md:mt-20 "> -->
-    <!-- <h1 class="text-2xl md:text-5xl ww font-semibold mb-4">
-          Experience the Perfect Fusion of Lifestyle & Investment with GRAPH's Residential Plots
-        </h1>
-
-
-        <div class="p-8 w-[85%]">
-          <h3 class="text-white text-base md:text-3xl mb-8">
-            Elevate your future and secure your dream property in Moradabad or
-            Delhi NCR. Premium plots starting at₹1 Cr+
-          </h3>
-        </div> -->
-
-    <!-- <div class="flex justify-center items-center absolute left-0 top-0 w-full h-full"> -->
-    <video src="./images/graphVideo.mp4" muted autoplay loop playsinline>
-
+   <!-- <div class="video-wrapper"> -->
+    <video autoplay muted loop playsinline>
+      <source src="./images/graph-website-video-desktop.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
-
-    <!-- Button -->
-    <!-- <button
-          class="group text-[#7C5A19] z-50 font-semibold flex justify-between items-center gap-6 px-2 pl-6 py-2 rounded-full btn-animated hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
-          Discover More
-          <span
-            class="bg-white text-[#7C5A19] p-2 rounded-full flex items-center justify-center transition-all duration-300">
-            <p class="rotate-[135deg] text-[#7C5A19]">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="text-[#7C5A19]">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M3.08741 14.3375C2.91184 14.5133 2.81323 14.7515 2.81323 15C2.81323 15.2484 2.91184 15.4867 3.08741 15.6625L11.8212 24.4125C11.9076 24.5021 12.011 24.5735 12.1254 24.6227C12.2397 24.6719 12.3627 24.6978 12.4872 24.699C12.6117 24.7001 12.7351 24.6764 12.8504 24.6294C12.9656 24.5823 13.0703 24.5127 13.1584 24.4247C13.2465 24.3368 13.3161 24.2321 13.3633 24.1169C13.4105 24.0017 13.4343 23.8783 13.4333 23.7538C13.4322 23.6293 13.4064 23.5063 13.3574 23.3919C13.3083 23.2775 13.2369 23.174 13.1474 23.0875L6.01241 15.9387L26.2499 15.9525C26.4985 15.9528 26.7371 15.8544 26.9132 15.6788C27.0892 15.5032 27.1883 15.2649 27.1887 15.0162C27.189 14.7676 27.0905 14.529 26.915 14.353C26.7394 14.1769 26.501 14.0778 26.2524 14.0775L6.00991 14.065L13.1487 6.91249C13.2382 6.82596 13.3095 6.72248 13.3586 6.60808C13.4077 6.49368 13.4335 6.37065 13.4345 6.24617C13.4355 6.12169 13.4118 5.99825 13.3646 5.88305C13.3174 5.76786 13.2477 5.66322 13.1596 5.57524C13.0716 5.48726 12.9669 5.41769 12.8516 5.37061C12.7364 5.32353 12.6129 5.29986 12.4885 5.301C12.364 5.30214 12.241 5.32806 12.1266 5.37725C12.0123 5.42644 11.9088 5.49791 11.8224 5.58749L3.08741 14.3375Z"
-                  fill="currentColor" />
-              </svg>
-            </p>
-          </span>
-        </button> -->
-    <!-- </div> -->
-
-    <!-- </div> -->
-  </section>
+  <!-- </div> -->
 
   <!-- Section 2 (Placeholder) -->
   <section class="w-screen relative min-h-[300px] flex flex-col gap-24 pb-12 bg-white">
     <!-- Top Div -->
-    <div class="flex flex-col lg:flex-row gap-8 items-center mb-4">
+    <div class="flex flex-col lg:flex-row gap-6 ">
       <!-- Left Div For Img -->
       <div class="w-full lg:w-1/2 ">
         <img src="./images/s2Img.png" alt="The Graph Story Image"
@@ -109,7 +76,7 @@
       </div>
 
       <!-- Right Side Div For Content -->
-      <div class="w-full lg:w-1/2 flex flex-col p-4 pt-0 md:p-2 gap-4 bg-[#FDFDFD]">
+      <div class="w-full lg:w-1/2 flex flex-col p-4 md:p-10 gap-4 bg-[#FDFDFD]">
         <h1 class="text-2xl md:text-4xl mb-6 font-bold text-[#7C5A19]">
           The Graph Story
         </h1>
@@ -617,14 +584,26 @@
       scrollCarousel('right');
     }, 2000);
 
-    function reloadMobileVideo() {
-      document.querySelector('video').src = "./images/graphVM.mp4";
-    }
-    window.addEventListener('resize', (e) => {
-      if (e.target.innerWidth <= 1024) {
-        reloadMobileVideo();
+
+
+
+    function improveResponsive(e) {
+      if (e <= 1024 && e > 425) {
+        document.querySelector('video').src = "./images/graph-website-video-tablet.mp4";
+      } else if (e < 425) {
+        document.querySelector('video').src = "./images/graph-website-video-mobile.mp4";
+      } else {
+        document.querySelector('video').src = "./images/graph-website-video-desktop.mp4";
       }
-    })
+    }
+
+    window.addEventListener("resize", (e) => {
+      improveResponsive(e.target.innerWidth);
+    });
+
+    improveResponsive(window.innerWidth);
+
+
   </script>
 
 </body>
