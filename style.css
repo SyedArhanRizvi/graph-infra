@@ -13,18 +13,15 @@ a {
   font-family: 'Inter', sans-serif;
 }
 
-.s1 {
-  height: 100vh;
-  width: 100vw;
-  
-  
-}
-video{
-  width: 100%;
-  object-fit: cover;
-  max-height: 100%;
+.s1{
+  /* height: 100vh; */
 }
 
+.s1 video{
+  max-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
 
 @media (min-width:758px) {
   .ww {
