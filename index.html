@@ -8,14 +8,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
-  <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
 </head>
 
-<body class="bg-white text-black">
+<body class="bg-white text-black relative">
   <!-- Header -->
   <!-- Header -->
   <header class="w-screen fixed top-0 left-0 z-50">
@@ -82,27 +80,30 @@
       </div>
     </div>
   </section> -->
-   <video id="hero-video" autoplay muted loop playsinline preload="auto">
-  <source id="video-source" src="./images/graph-website-video-desktop.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-  <!-- Section 2 (Placeholder) -->
-  <section class="w-screen relative min-h-[300px] flex flex-col gap-24 pb-12 bg-white">
+  <section class="relative">
+    <div class="sticky top-0 left-0 -z-10">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto">
+        <source id="video-source" src="./images/graph-website-video-desktop.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+  
+      <div class="s2Anime z-50 w-screen relative min-h-[300px] flex flex-col md:gap-10 gap-2 md:pb-12 bg-white ">
     <!-- Top Div -->
     <div class="flex flex-col lg:flex-row gap-6 ">
       <!-- Left Div For Img -->
       <div class="w-full lg:w-1/2 ">
         <img src="./images/s2Img.png" alt="The Graph Story Image"
-          class="w-full md:w-[100%] h-auto rounded-md object-cover" />
+          class="w-full md:w-[100%] h-auto s2Img rounded-md object-cover" />
       </div>
 
       <!-- Right Side Div For Content -->
-      <div class="w-full lg:w-1/2 flex flex-col p-4 md:p-10 gap-4 bg-[#FDFDFD]">
-        <h1 class="text-2xl md:text-4xl mb-6 font-bold text-[#7C5A19]">
+      <div class="w-full lg:w-1/2 flex flex-col md:h-[80%] p-4  md:p-10 gap-4 bg-[#FDFDFD]">
+        <h1 class="s2H1 text-2xl md:text-4xl mb-6 font-bold text-[#7C5A19]">
           The Graph Story
         </h1>
-        <div class="text-gray-700 text-base md:pr-10 md:text-lg leading-relaxed space-y-4">
+        <div class="s2PNode text-gray-700 text-base md:pr-10 md:text-lg leading-relaxed space-y-4">
           <p>
             At Graph Infra, we don’t just develop land, we design living
             ecosystems. As a boutique real estate developer with a Pan-India
@@ -125,10 +126,11 @@
             we help you build a legacy.
           </p>
         </div>
-        <div class=" w-full">
+        <div class="w-full">
           <!-- Button -->
           <button
-            class="group text-[#7C5A19] font-semibold flex justify-between items-center gap-6 px-2 pl-6 py-2 rounded-full btn-animated hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
+          style="font-weight: 500;"
+            class="group text-[#7C5A19] flex justify-between items-center gap-6 px-2 pl-6 py-1 rounded-full btn-animated hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
             Discover More
             <span
               class="bg-white text-[#7C5A19] p-2 rounded-full flex items-center justify-center transition-all duration-300">
@@ -147,9 +149,9 @@
     </div>
 
     <!-- Bottom Div -->
-    <div class="w-full text-center flex flex-col justify-center items-center gap-4 max-w-6xl mx-auto">
-      <div class="max-w-4xl">
-        <h1 class="text-xl md:text-4xl  capitalize mb-8 font-semibold text-[#7C5A19]">
+    <div class="w-full s2BtmD text-center flex flex-col justify-center items-center gap-4 max-w-6xl mx-auto md:mb-0 mb-4">
+      <div class="max-w-3xl">
+        <h1 class="sm:text-[2rem]  capitalize s2BtmH1 mb-2 sm:mb-8 font-semibold text-[#7C5A19] ">
           We’re not competing. We’re curating Experiences.
         </h1>
       </div>
@@ -167,7 +169,14 @@
     <div class="hidden lg:block absolute top-[65%] -translate-y-1/2 right-0">
       <img src="./images/flourPot.png" alt="Decorative Plant" class="w-[300px] h-[450px]" />
     </div>
+  </div>
+  
   </section>
+
+
+
+  <!-- Section 2 (Placeholder) -->
+
 
   <!-- The Section 3 Is Starting From Here  -->
   <section class="s3 w-screen px-4 py-12">
@@ -256,7 +265,7 @@
 
 
 
-  <section class="s4 w-screen min-h-screen relative flex flex-col pt-16 items-center">
+  <section class="s4 w-screen min-h-screen relative flex flex-col md:pt-16 items-center">
     <!-- Over Lay Div  -->
     <div class="overLay absolute h-full w-full top-0 left-0 z-10"></div>
     <!-- Top Div -->
@@ -385,7 +394,8 @@
           <!-- Submit Button -->
           <div class="flex justify-center">
             <button
-              class="group text-[#7C5A19]  flex justify-between items-center gap-6 px-2 pl-6 py-2 rounded-full btn-animated hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
+            style="font-weight: 500;"
+              class="group text-[#7C5A19]  flex justify-between items-center gap-6 px-2 pl-6 py-1 rounded-full btn-animated hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
               Submit
               <span
                 class="bg-white text-[#7C5A19] p-2 rounded-full flex items-center justify-center transition-all duration-300">
@@ -548,70 +558,12 @@
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  <!-- Scripts -->
-   <script src="./script.js"></script>
-  <script>
-    lucide.createIcons();
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navbar = document.getElementById("navbar");
-    let lastScrollTop = 0;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  <script src="./script.js"></script>
 
-      if (scrollTop === 0) {
-        // At top
-        navbar.classList.remove("bg-black", "py-2", "md:py-4");
-        navbar.classList.add("bg-transparent", "py-4", "md:py-10");
-        navbar.style.top = "0";
-      } else if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-black");
-        navbar.style.top = "-100%";
-      } else {
-        // Scrolling up
-        navbar.classList.remove("bg-transparent", "py-4", "md:py-10");
-        navbar.classList.add("bg-black", "py-2", "md:py-4");
-        navbar.style.top = "0";
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-
-
-    const container = document.getElementById("carouselContainer");
-
-    function scrollCarousel(direction) {
-      const screenWidth = window.innerWidth;
-      const card = container.querySelector('.card');
-      const cardWidth = card.offsetWidth + 32; // include gap (gap-8 = 32px)
-
-      // Scroll by 2 cards on large screens, 1 card on small
-      const cardsToScroll = screenWidth >= 1024 ? 2 : 1;
-      const scrollAmount = cardWidth * cardsToScroll;
-
-      container.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-
-    // Auto-scroll every 4 seconds
-    setInterval(() => {
-      scrollCarousel('right');
-    }, 2000);
-
-
-
-
-
-  </script>
 
 </body>
 
