@@ -187,3 +187,8 @@ a {
   color: #fff;
   transform: scale(1.03); 
 }
+
+
+select {
+  padding: 1rem;
+}
