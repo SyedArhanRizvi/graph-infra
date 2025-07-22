@@ -163,79 +163,29 @@ a {
 }
 
 
+/* Button Animations  */
 
-/* Background animation */
-@keyframes diagonalGradientMove {
-  0% {
-    background-position: bottom left;
-  }
-
-  100% {
-    background-position: top right;
-  }
-}
-
-
-
-/* Background Keyframe */
-
-
-
-
-@keyframes iconFade {
-  0% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.icon-animate {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
 
 .group:hover .icon-animate {
-  animation: iconFade 0.4s ease forwards;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .icn:hover {
-  transform: scale(1.5);
-  transition: transform 0.2s;
-}
-
-
-@keyframes diagonalGradientMove {
-  0% {
-    background-position: bottom left;
-
-    background-image: linear-gradient(to top right, #FAD872, #FCF29A, #E4C56D);
-
-  }
-
-  100% {
-    background-position: top right;
-    background-image: linear-gradient(to top right, #fb923c, #fb923c, #f97316);
-  }
+   color: #f1c945;
+  background-color: #fff;
+  transform: rotate(45deg) scale(1.1); /* animated icon circle */
 }
 
 .btn-animated {
   background: linear-gradient(45deg, #FAD872, #FCF29A, #E4C56D);
   background-size: 400% 400%;
   background-position: 0% 0%;
-  transition: background-position 1s ease;
+ /* Smooth transition */
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-animated:hover {
-  background-position: 100% 100%;
+  background: #f1c945;
+  color: #fff;
+  transform: scale(1.03); 
 }

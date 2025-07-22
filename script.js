@@ -140,39 +140,39 @@ function section1Anime() {
       scrub: 1,
     },
   });
-  const s2BtmH1 = document.querySelector(".s2BtmH1");
+  // const s2BtmH1 = document.querySelector(".s2BtmH1");
 
-  const words = s2BtmH1.textContent.trim().split(" ");
-  s2BtmH1.innerHTML = "";
+  // const words = s2BtmH1.textContent.trim().split(" ");
+  // s2BtmH1.innerHTML = "";
 
-  words.forEach((word, index) => {
-    const span = document.createElement("span");
-    span.textContent = word + " ";
-    span.style.display = "inline-block";
-    span.style.opacity = "0";
-    s2BtmH1.appendChild(span);
-    span.style.marginRight = "10px";
+  // words.forEach((word, index) => {
+  //   const span = document.createElement("span");
+  //   span.textContent = word + " ";
+  //   span.style.display = "inline-block";
+  //   span.style.opacity = "0";
+  //   s2BtmH1.appendChild(span);
+  //   span.style.marginRight = "10px";
 
-    gsap.to(span, {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      duration: 0.8,
-      delay: index * 0.1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: span,
-        scroller: "body",
-        start: "top 55%",
-        // markers: true,
-      },
-    });
+  //   gsap.to(span, {
+  //     opacity: 1,
+  //     scale: 1,
+  //     y: 0,
+  //     duration: 0.8,
+  //     delay: index * 0.1,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: span,
+  //       scroller: "body",
+  //       start: "top 55%",
+  //       // markers: true,
+  //     },
+  //   });
 
-    gsap.set(span, {
-      scale: 0.8,
-      y: 20,
-    });
-  });
+  //   gsap.set(span, {
+  //     scale: 0.8,
+  //     y: 20,
+  //   });
+  // });
 
   const paraNodes2 = document.querySelectorAll(".s2BtmD p");
 
