@@ -56,9 +56,9 @@ function scrollCarousel(direction) {
 }
 
 // Auto-scroll every 4 seconds
-setInterval(() => {
-  scrollCarousel("right");
-}, 2000);
+// setInterval(() => {
+//   scrollCarousel("right");
+// }, 4000);
 
 let currentVideoSrc = "";
 
