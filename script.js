@@ -45,7 +45,7 @@ const container = document.getElementById("carouselContainer");
 function scrollCarousel(direction) {
   const screenWidth = window.innerWidth;
   const card = container.querySelector(".card");
-  const cardWidth = card.offsetWidth + 32; 
+  const cardWidth = card.offsetWidth + 32;
   const cardsToScroll = screenWidth >= 1024 ? 2 : 1;
   const scrollAmount = cardWidth * cardsToScroll;
 
@@ -128,53 +128,53 @@ function section1Anime() {
   });
 
   gsap.from(".s2Img", {
-    x:-100,
-    opacity:0,
-    duration:2,
-    scrollTrigger:{
-      trigger:".s2Img",
-      scroller:"body",
+    x: -100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".s2Img",
+      scroller: "body",
       // markers:true,
-        start: "top 75%",
+      start: "top 75%",
       end: "top 20%",
       scrub: 1,
-    }
-  });
-const s2BtmH1 = document.querySelector(".s2BtmH1");
-
-const words = s2BtmH1.textContent.trim().split(" ");
-s2BtmH1.innerHTML = ""; 
-
-words.forEach((word, index) => {
-  const span = document.createElement("span");
-  span.textContent = word + " ";
-  span.style.display = "inline-block";
-  span.style.opacity = "0"; 
-  s2BtmH1.appendChild(span);
-  span.style.marginRight="10px"
-
-  gsap.to(span, {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    duration: 0.8,
-    delay: index * 0.1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: span,
-      scroller: "body",
-      start: "top 55%",
-      // markers: true,
     },
   });
+  const s2BtmH1 = document.querySelector(".s2BtmH1");
 
-  gsap.set(span, {
-    scale: 0.8,
-    y: 20,
+  const words = s2BtmH1.textContent.trim().split(" ");
+  s2BtmH1.innerHTML = "";
+
+  words.forEach((word, index) => {
+    const span = document.createElement("span");
+    span.textContent = word + " ";
+    span.style.display = "inline-block";
+    span.style.opacity = "0";
+    s2BtmH1.appendChild(span);
+    span.style.marginRight = "10px";
+
+    gsap.to(span, {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      duration: 0.8,
+      delay: index * 0.1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: span,
+        scroller: "body",
+        start: "top 55%",
+        // markers: true,
+      },
+    });
+
+    gsap.set(span, {
+      scale: 0.8,
+      y: 20,
+    });
   });
-});
 
-const paraNodes2 = document.querySelectorAll(".s2BtmD p");
+  const paraNodes2 = document.querySelectorAll(".s2BtmD p");
 
   paraNodes2.forEach((ele) => {
     gsap.from(ele, {
@@ -192,7 +192,23 @@ const paraNodes2 = document.querySelectorAll(".s2BtmD p");
       },
     });
   });
-
 }
 
 section1Anime();
+
+function changeImg() {
+  const screenWidth = window.innerWidth;
+  let img = document.querySelector(".simgD img");
+  if (screenWidth <= 1024) {
+    img.src = "./images/mbsc.png"
+  } else {
+    img.src = "./images/s2Img.png";
+  }
+}
+
+
+changeImg();
+
+window.addEventListener("resize", ()=>{
+  changeImg();
+})
