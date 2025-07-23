@@ -204,3 +204,16 @@ select {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.anc:hover {
+  animation: ancAnime 0.5s ease-in;
+  background: #A26A2B;
+  
+}
+@keyframes ancAnime {
+  0% {
+     background-color: #f39e3c;
+  }
+  100% {
+     background-color: #A26A2B;
+  }
+}
