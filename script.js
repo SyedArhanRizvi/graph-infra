@@ -22,18 +22,16 @@ window.addEventListener("scroll", () => {
 
   if (scrollTop === 0) {
     // At top
-    navbar.classList.remove("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]", "py-2", "md:py-4");
-    navbar.classList.add("bg-transparent", "py-4", "md:py-10");
-    navbar.style.top = "0";
+    navbar.classList.remove("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
+    navbar.classList.add("bg-transparent", "py-1");
   } else if (scrollTop > lastScrollTop) {
     // Scrolling down
     navbar.classList.remove("bg-transparent");
     navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
-    navbar.style.top = "-100%";
   } else {
     // Scrolling up
-    navbar.classList.remove("bg-transparent", "py-4", "md:py-10");
-    navbar.classList.add("bg-black", "py-2", "md:py-4");
+    navbar.classList.remove("bg-transparent");
+    navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
     navbar.style.top = "0";
   }
 
