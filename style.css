@@ -140,7 +140,7 @@ a {
 }
 
 .s4 .overLay {
-  background: linear-gradient(to bottom, #0A2162 0.9%, #00000066 80%);
+  background: linear-gradient(125deg, #0a21626b 0.1%, #0d169266 60%);
 }
 
 .transition-all {
@@ -152,12 +152,9 @@ a {
 }
 
 .blurD {
-  background-image: url(./images/bgCloud.png);
+  /* background-image: url(./images/frame22.png); */
   height: 100%;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 
