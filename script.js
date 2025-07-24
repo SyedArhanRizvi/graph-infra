@@ -15,16 +15,7 @@ let lastScrollTop = 0;
 
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
-  navbar.classList.remove("bg-transparent");
-    navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
 });
-
-const closeBtn = document.getElementById("close-btn");
-
-closeBtn.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
-});
-
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -98,6 +89,8 @@ function section1Anime() {
       scroller: "body",
       start: "top 70%",
       end: "top 20%",
+      // scrub: true,
+      // markers: true,
     },
   });
 
@@ -112,6 +105,8 @@ function section1Anime() {
         scroller: "body",
         start: "top 70%",
         end: "top 20%",
+        // scrub: true,
+        // markers: true,
       },
     });
   });
