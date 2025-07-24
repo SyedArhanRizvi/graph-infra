@@ -122,7 +122,7 @@ video {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  background: linear-gradient(135deg, #D5A950 0%, #FBE687 50%, #FBDB77 100%);
+  background: linear-gradient(280deg, #D5A950 0%, #FBE687 50%, #FBDB77 100%);
 }
 
 .card {
@@ -178,16 +178,18 @@ video {
 
 .btn-animated {
   background: linear-gradient(45deg, #FAD872, #FCF29A, #E4C56D);
-  background-size: 400% 400%;
-  background-position: 0% 0%;
+  /* background-size: 400% 400%;
+  background-position: 0% 0%; */
   /* Smooth transition */
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  color: #B29157;
 }
 
 .btn-animated:hover {
-  background: #f1c945;
-  color: #fff;
-  transform: scale(1.03);
+  background: linear-gradient(200deg, #FAD872, #FCF29A, #E4C56D);
+  background-size: 400% 400%;
+  background-position: 0% 0%;
+  /* Smooth transition */
 }
 
 
@@ -216,4 +218,8 @@ select {
   100% {
      background-color: #A26A2B;
   }
+}
+
+.updatedHeading {
+  color: #b29157;
 }
