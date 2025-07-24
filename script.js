@@ -7,6 +7,12 @@ const getVideoSrc = (width) => {
   return "./images/graph-website-video-desktop.mp4";
 };
 
+const closeBtn = document.getElementById("close-btn");
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
 //  lucide.createIcons();
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
