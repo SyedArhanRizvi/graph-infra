@@ -15,26 +15,31 @@ let lastScrollTop = 0;
 
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
+  navbar.classList.remove("bg-transparent");
+    navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
 });
+
+const closeBtn = document.getElementById("close-btn");
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollTop === 0) {
-    // At top
     navbar.classList.remove("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
     navbar.classList.add("bg-transparent", "py-1");
   } else if (scrollTop > lastScrollTop) {
-    // Scrolling down
     navbar.classList.remove("bg-transparent");
     navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
   } else {
-    // Scrolling up
     navbar.classList.remove("bg-transparent");
     navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
     navbar.style.top = "0";
   }
-
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
@@ -48,15 +53,10 @@ function scrollCarousel(direction) {
   const scrollAmount = cardWidth * cardsToScroll;
 
   container.scrollBy({
-    left: direction === "left" ? -scrollAmount : scrollAmount,
-    behavior: "smooth",
+  left: direction === "left" ? -scrollAmount : scrollAmount,
+  behavior: "smooth",
   });
 }
-
-// Auto-scroll every 4 seconds
-// setInterval(() => {
-//   scrollCarousel("right");
-// }, 4000);
 
 let currentVideoSrc = "";
 
@@ -64,19 +64,15 @@ function setResponsiveVideo() {
   const screenWidth = window.innerWidth;
   const desiredSrc = getVideoSrc(screenWidth);
 
-  // Avoid reloading same video again and again
   if (currentVideoSrc === desiredSrc) return;
 
-  // Update video src
   sourceElement.src = desiredSrc;
   videoElement.load();
   currentVideoSrc = desiredSrc;
 }
 
-// Initial load
 setResponsiveVideo();
 
-// Resize optimization using debounce
 let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
@@ -87,7 +83,6 @@ gsap.registerPlugin(ScrollTrigger);
 function section1Anime() {
   const h1 = document.querySelector(".s2H1");
   const paraNodes = document.querySelectorAll(".s2PNode p");
-  // alert(paraNodes)
   if (!h1) {
     console.error("Element .s2H1 not found");
     return;
@@ -103,8 +98,6 @@ function section1Anime() {
       scroller: "body",
       start: "top 70%",
       end: "top 20%",
-      // scrub: true,
-      // markers: true,
     },
   });
 
@@ -119,8 +112,6 @@ function section1Anime() {
         scroller: "body",
         start: "top 70%",
         end: "top 20%",
-        // scrub: true,
-        // markers: true,
       },
     });
   });

@@ -34,7 +34,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden p-2 mt-10focus:outline-none" aria-label="Toggle Menu">
+      <button id="menu-btn" class="md:hidden p-2 focus:outline-none" aria-label="Toggle Menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -44,14 +44,19 @@
     </nav>
 
     <!-- ✅ Mobile Links (Visible on toggle) -->
-    <div id="mobile-menu"
-      class="md:hidden hidden flex-col bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)] updatedHeading text-center space-y-4 py-6 px-6 transition-all duration-300">
-      <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Home</a>
-      <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">About Us</a>
-      <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Upcoming Projects</a>
-      <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Contact</a>
-    </div>
-  </header>
+<div id="mobile-menu" class="md:hidden hidden flex-col z-[998] fixed top-[0] z-[999] left-0 h-screen w-full bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)] updatedHeading text-center space-y-4 py-6 px-6 transition-all duration-300">
+
+  <div id="close-btn" class="absolute top-6 right-6 cursor-pointer text-[#FCEF96]">
+ <p>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FCEF96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></p>
+  </div>
+
+  <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Home</a>
+  <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">About Us</a>
+  <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Upcoming Projects</a>
+  <a href="#" class="block py-2 px-4 hover:bg-[#FCEF96] rounded">Contact</a>
+</div>
+
 
 
   <!-- Main -->
