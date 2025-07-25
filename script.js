@@ -27,14 +27,20 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollTop === 0) {
-    navbar.classList.remove("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
+    navbar.classList.remove(
+      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+    );
     navbar.classList.add("bg-transparent", "py-1");
   } else if (scrollTop > lastScrollTop) {
     navbar.classList.remove("bg-transparent");
-    navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
+    navbar.classList.add(
+      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+    );
   } else {
     navbar.classList.remove("bg-transparent");
-    navbar.classList.add("bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]");
+    navbar.classList.add(
+      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+    );
     navbar.style.top = "0";
   }
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
@@ -50,8 +56,8 @@ function scrollCarousel(direction) {
   const scrollAmount = cardWidth * cardsToScroll;
 
   container.scrollBy({
-  left: direction === "left" ? -scrollAmount : scrollAmount,
-  behavior: "smooth",
+    left: direction === "left" ? -scrollAmount : scrollAmount,
+    behavior: "smooth",
   });
 }
 
@@ -186,19 +192,18 @@ function section1Anime() {
 
 section1Anime();
 
-function changeImg() {
-  const screenWidth = window.innerWidth;
-  let img = document.querySelector(".simgD img");
-  if (screenWidth <= 1024) {
-    img.src = "./images/mbsc.png"
-  } else {
-    img.src = "./images/s2Img.png";
-  }
-}
+// function changeImg() {
+//   const screenWidth = window.innerWidth;
+//   let img = document.querySelector(".simgD img");
+//   if (screenWidth <= 1024) {
+//     img.src = "./images/mbsc.png";
+//   } else {
+//     img.src = "./images/s2Img.png";
+//   }
+// }
 
+// changeImg();
 
-changeImg();
-
-window.addEventListener("resize", ()=>{
-  changeImg();
-})
+// window.addEventListener("resize", () => {
+//   changeImg();
+// });
