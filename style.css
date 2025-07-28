@@ -177,16 +177,16 @@ video {
 }
 
 .btn-animated {
-  background: linear-gradient(45deg, #FAD872, #FCF29A, #E4C56D);
+  background: linear-gradient(45deg, #b29157, #e7c589, #d5b377);
   /* background-size: 400% 400%;
   background-position: 0% 0%; */
   /* Smooth transition */
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  color: #B29157;
+  color: #FFFFFF;
 }
 
 .btn-animated:hover {
-  background: linear-gradient(200deg, #FAD872, #FCF29A, #E4C56D);
+ background: linear-gradient(200deg, #b29157, #e7c589, #d5b377);
   background-size: 400% 400%;
   background-position: 0% 0%;
   /* Smooth transition */
