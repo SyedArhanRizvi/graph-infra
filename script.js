@@ -23,28 +23,28 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+// window.addEventListener("scroll", () => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop === 0) {
-    navbar.classList.remove(
-      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
-    );
-    navbar.classList.add("bg-transparent", "py-1");
-  } else if (scrollTop > lastScrollTop) {
-    navbar.classList.remove("bg-transparent");
-    navbar.classList.add(
-      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
-    );
-  } else {
-    navbar.classList.remove("bg-transparent");
-    navbar.classList.add(
-      "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
-    );
-    navbar.style.top = "0";
-  }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
+//   if (scrollTop === 0) {
+//     navbar.classList.remove(
+//       "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+//     );
+//     navbar.classList.add("bg-transparent", "py-1");
+//   } else if (scrollTop > lastScrollTop) {
+//     navbar.classList.remove("bg-transparent");
+//     navbar.classList.add(
+//       "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+//     );
+//   } else {
+//     navbar.classList.remove("bg-transparent");
+//     navbar.classList.add(
+//       "bg-[linear-gradient(90deg,_rgba(21,18,72,1)_100%,_rgba(51,44,174,0.2)_100%)]"
+//     );
+//     navbar.style.top = "0";
+//   }
+//   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+// });
 
 const container = document.getElementById("carouselContainer");
 
